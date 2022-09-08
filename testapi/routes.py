@@ -44,7 +44,7 @@ def widget():
 # To retrieve a record for a single widget given a name
 @app.route("/widget/<wname>", methods=['GET', 'DELETE'])
 @app.route("/widget/<wname>/", methods=['GET', 'DELETE'])
-def get_widget(wname):
+def get_widget(wname: str):
     w = Widget.query.filter_by(name=wname).first()
 
     if (w is None):
@@ -60,7 +60,7 @@ def get_widget(wname):
 # to create or update a record for a single widget in the DB
 @app.route("/widget/<wname>/<int:no_parts>", methods=['POST'])
 @app.route("/widget/<wname>/<int:no_parts>/", methods=['POST'])
-def alter_Widget(wname, no_parts):
+def alter_Widget(wname: str, no_parts: int):
     w = Widget.query.filter_by(name=wname).first()
     print(type(w))
 
