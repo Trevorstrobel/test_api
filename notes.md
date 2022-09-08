@@ -1,3 +1,5 @@
+## NOTE: These notes are for early development purposes and should probably just be thrown away at this point. 
+
 # Notes 
 The common API endpoint for widgets is as follows:
 
